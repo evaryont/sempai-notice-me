@@ -4,7 +4,7 @@ Read up on syntax:
   http://elm-lang.org/learn/Syntax.elm
 
 Run this command to compile it to JS:
-  (todo)
+  rake build
 
 -}
 
@@ -21,5 +21,5 @@ main =
 
 helloWorld : Element
 helloWorld =
-    asText "Notice me, sempai!"
+    asText "Will sempai notice me?"
 

@@ -29,5 +29,6 @@ desc 'build & commit latest elm stuff'
 task :push => :build do
   parent_repo = Dir.pwd
   cd @pages_dir
+  sh 'git add *'
   sh 'git commit -m "Update compiled version from Elm"'
 end
