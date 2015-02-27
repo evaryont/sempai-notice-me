@@ -24,3 +24,10 @@ task :server do
   app.run Rack::Directory.new(File.join(Dir.pwd, @pages_dir))
   Rack::Server.start :app => app, :Port => 3000
 end
+
+desc 'build & commit latest elm stuff'
+task :push => :build do
+  parent_repo = Dir.pwd
+  cd @pages_dir
+  sh 'git commit -m "Update compiled version from Elm"'
+end
